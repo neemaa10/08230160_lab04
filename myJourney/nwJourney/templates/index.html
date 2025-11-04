@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Journey</title>
+</head>
+
+<body>
+
+
+    <!-- Navigation Bar -->
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <nav>
+        <a href="{% url 'index' %}">🏠 Learning Journey</a>
+        <a href="{% url 'aboutme' %}">🙋‍♀️ About Me</a>
+    </nav>
+
+    <!-- Learning Journey Header -->
+    <h1>📚 Learning Journey</h1>
+
+    <!-- Learning Journey Table -->
+    <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Topic Covered</th>
+                <th>Key Learning</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.week }}</td>
+                <td>{{ entry.topic }}</td>
+                <td>{{ entry.key_learning }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Weeks: {{ entries|length }}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Admin-Proof Image Section -->
+<h2>📷 Admin-Proof</h2>
+<div>
+    <figure style="display:inline-block; text-align:center; margin:10px;">
+        <img src="{% static 'images/learning journey.png' %}" alt="learning journey">
+        <figcaption>Learning Journey Admin Proof</figcaption>
+    </figure>
+
+    <figure style="display:inline-block; text-align:center; margin:10px;">
+        <img src="{% static 'images/aboutme.png' %}" alt="aboutme">
+        <figcaption>About Me Admin Proof</figcaption>
+    </figure>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Nima Wangmo | 08230160
+    </footer>
+
+</body>
+
+</html>

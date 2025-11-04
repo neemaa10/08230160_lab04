@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="{% url 'index' %}">🏠 Learning Journey</a>
+</nav>
+
+<!-- Profile Section -->
+<div class="profile">
+    <!-- Profile Image -->
+    <img src="{% static 'images/profile.jpg' %}" alt="My Profile Image" width="150">
+    
+    <h3>My Details</h3>
+    <ul>
+        <li><strong>Name:</strong> {{ profile.name }}</li>
+        <li><strong>Student ID:</strong> {{ profile.student_id }}</li>
+        <li><strong>Course:</strong> {{ profile.course }}</li>
+        <li><strong>Interest:</strong> {{ profile.interests }}</li>
+        <li><strong>Goal:</strong> {{ profile.goals }}</li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2025 Nima Wangmo | 08230160
+</footer>
+
+</body>
+</html>

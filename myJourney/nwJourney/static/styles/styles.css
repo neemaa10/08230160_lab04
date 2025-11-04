@@ -1,0 +1,125 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Headers */
+h1, h2, h3 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Learning Journey Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+/* Admin-Proof Image Section */
+div img {
+    width: 250px;
+    margin: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Profile Section */
+.profile {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.profile ul li {
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    div img {
+        width: 200px;
+    }
+
+    .profile {
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 5px;
+    }
+}
